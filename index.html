@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<title>技术交流</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-markdown>
+					<script type="text/template">
+					# 宁波银行交流
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 议题
+					1. 团队介绍
+					2. 移动开发
+					3. 技术架构栈
+					4. 技术展望
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 团队介绍
+					1. 比特海洋 http://www.bitocean.co/
+					美国比特币基金会成员，致力于区块链研究。
+					2. 易得融信 http://www.ideatech.info/
+					多年行业相关经验和大数据方案。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 移动开发
+					1. react native加原生混合开发
+					2. 由react负责ui，减少跨平台的工作量
+					3. 坑：版本迭代太快，我去年年底0.14.2开始用，到现在已经0.37+。API变动挺大。。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### 个人建议
+					1. 建立npm私有仓库，开发共有的npm模块（供react native和一切别的node项目用）
+					2. 搭建自己的codepush平台（微软有开源的方案），发布平台，可供移动app的热更新和版本管理。
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 技术架构栈
+					1. 基于容器（以 Docker 为代表）的虚拟化技术和微服务
+					2. k8s（Kubernetes）基本是docker调度的未来了。
+					3. 服务之间的调用通过http/rpc交互。
+					4. 个人看好grpc这一套多语言，基于最新稳定技术方案，
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## 技术展望
+
+					### 数据库
+					1. TiDB (https://github.com/pingcap/tidb)
+
+					### 编程语言
+					1. Go/Rust
+					2. Swift
+					3. Elixir/Erlang OTP
+
+					### 技术栈
+					1. react native/react
+					2. gRPC
+					3. spring boot
+					4. k8s
+					5. raft分布式一致性算法
+					6. pb协议和http2.0
+
+					</script>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Enables touch navigation on devices with touch input
+    		touch: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
